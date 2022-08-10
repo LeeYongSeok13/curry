@@ -1,8 +1,13 @@
 .Wrap {}
 
 h2 {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 700;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 500;
 }
 
 p {
@@ -14,6 +19,13 @@ p {
     display: flex;
     width: 1200px;
     margin: 0 auto;
+}
+
+.Header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
 }
 
 .top {
@@ -28,7 +40,20 @@ p {
 }
 
 .top ul li {
+    position: relative;
     font-size: 11px;
+}
+
+.top ul li~li::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 11px;
+    background: #000;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
 }
 
 .main_menu {
@@ -36,9 +61,11 @@ p {
 }
 
 .main_menu .container {
-    position: relative;
     justify-content: space-between;
     height: 129px;
+}
+
+.main_menu .container .gnb {
     line-height: 129px;
 }
 
@@ -48,6 +75,7 @@ p {
 }
 
 .main_menu .gnb>ul>li {
+    position: relative;
     font-size: 17px;
     font-weight: 400;
 }
@@ -56,21 +84,49 @@ p {
     position: absolute;
     display: block;
     z-index: 999;
+    text-align: center;
     top: 129px;
+    left: 50%;
+    transform: translateX(-50%);
     line-height: 35px;
-    left: 0;
-    width: 100%;
-    height: 250px;
-    display: block;
-    visibility: hidden;
+    width: 200px;
     background: #fff;
+    border: 1px solid #ddd;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.main_menu .gnb>ul>li>ul>li {
+    border-bottom: 1px solid #ddd;
+}
+
+.main_menu .gnb>ul>li>ul>li:nth-last-child(1) {
+    border: none;
+}
+
+.main_menu .gnb>ul>li>ul>li:hover {
+    background: #000;
+    color: #fff;
 }
 
 .main_menu .gnb>ul>li:hover>ul {
-    visibility: visible;
+    opacity: 1;
+}
+
+.main_menu .gnb>ul>li~li::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 25px;
+    background: #000;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
 }
 
 .main_Slider figure {
+    position: relative;
     height: 600px;
 }
 
@@ -86,8 +142,131 @@ p {
     background: url('../img/visual03.jpg') no-repeat center center/cover;
 }
 
+.main_Slider .slick-dots {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_Slider .slick-dots li {
+    display: inline-block;
+}
+
+.main_Slider .slick-dots li button {
+    outline: none;
+    border: none;
+    font-size: 0;
+    width: 300px;
+    height: 5px;
+    background: #000;
+}
+
+.main_Slider .slick-dots li.slick-active button {
+    background: #fff;
+}
+
+.information {
+    display: block;
+    padding: 100px 0;
+}
+
+.information h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.information .container {
+    gap: 10px;
+}
+
+.information .container figure {
+    text-align: center;
+    background: #333;
+    padding: 100px 20px;
+}
+
+.information .container figure img {
+    width: 25%;
+    margin: 0 0 10px 0;
+    filter: invert(100%);
+}
+
+.information .container .text h3 {
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.information .container .text strong {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+    color: #fff;
+}
+
+.information .container .text p {
+    line-height: 1.25;
+    color: #fff;
+}
+
+.brand {
+    padding: 100px 0;
+    display: block;
+}
+
+.brand h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.brand .container {
+    gap: 50px;
+}
+
+.brand .container figure {
+    position: relative;
+}
+
+.brand .container figure::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f00;
+}
+
+.menu {
+    padding: 100px 0;
+}
+
+.menu h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.tab_menu ul {
+    width: 1200px;
+    display: flex;
+    text-align: center;
+}
+
+.tab_menu ul li {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px 50px;
+}
+
+.tab_menu ul li a {
+    font-size: 25px;
+}
+
 .introduce {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .introduce .container {
@@ -99,17 +278,20 @@ p {
     width: 50%;
 }
 
-.introduce .container .left h2 {
-    margin: 0 0 50px 0;
+.introduce .container .left h3 {
+    position: relative;
+    margin: 0 0 50px 20px;
+
 }
 
-.introduce .container .left h2::after {
+.introduce .container .left h3::before {
+    position: absolute;
     content: "";
     display: block;
-    width: 25%;
-    height: 3px;
-    background: #f00;
-    margin: 10px 0 0 0;
+    width: 3px;
+    height: 100%;
+    background: #ff1111;
+    left: -20px;
 }
 
 .introduce .container .left p {
@@ -120,6 +302,7 @@ p {
     position: relative;
     float: left;
     width: 50%;
+    border: 1px solid #ddd;
 }
 
 .introduce .container .right img {
@@ -127,6 +310,37 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+.map {
+    padding: 100px 0;
+}
 
+.map .left {
+    float: left;
+    width: 50%;
+}
+
+.map .left h3 {
+    position: relative;
+    margin: 0 0 50px 20px;
+}
+
+.map .left h3::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    left: -20px;
+    background: #f00;
+}
+
+.map .left p {
+    line-height: 20px;
+}
+
+map .right {
+    float: left;
+    width: 50%;
 }
