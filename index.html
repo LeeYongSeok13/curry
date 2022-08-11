@@ -141,25 +141,16 @@
                 <div class="container">
                     <figure>
                         <img src="./img/brand01.jpg" alt="">
+                        <div class="inner_text">
+                            <h3>마음과 정성의 100시간</h3>
+                        </div>
                     </figure>
                     <figure>
                         <img src="./img/brand02.jpg" alt="">
+                        <div class="inner_text">
+                            <h3>아낌없이 주는 정 문화</h3>
+                        </div>
                     </figure>
-                </div>
-            </section>
-            <section class="menu">
-                <h2>MENU</h2>
-                <div class="container">
-                    <div class="tab_menu">
-                        <ul>
-                            <li class="on"><a href="">카레라이스 / 우동 / 파스타</a></li>
-                            <li><a href="">하이라이스 / 돈부리 / 세트</a></li>
-                            <li><a href="">토핑</a></li>
-                        </ul>
-                    </div>
-                    <div class="tab_content">
-
-                    </div>
                 </div>
             </section>
             <section class="introduce">
@@ -193,15 +184,60 @@
                     <div class="left">
                         <h3>쿠산코리아 오시는길</h3>
                         <p>서울 강남구 압구정로 10길 13 마사빌딩 3층 쿠산코리아㈜
-                            ​<br />​Tel 1833-9383
-                            ​<br />Fax 02-3144-0128​</p>
+                            <br />13, Apgujeong-ro 10-gil, Gangnam-gu, Seoul, Republic of Korea
+                        </p>
+                        <div class="map_subicon">
+                            <i class="xi-call">
+                                <strong>TEL</strong>
+                            </i>
+                            <i class="xi-fax"></i>
+                            <i class="xi-mail"></i>
+                        </div>
                     </div>
                     <div class="right">
+                        <div class="map_case">
+                            <!-- * 카카오맵 - 지도퍼가기 -->
+                            <!-- 1. 지도 노드 -->
+                            <div id="daumRoughmapContainer1660201643739"
+                                class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
+                            <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+                            <script charset="UTF-8" class="daum_roughmap_loader_script"
+                                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                            <!-- 3. 실행 스크립트 -->
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp": "1660201643739",
+                                    "key": "2bch4",
+                                    "mapWidth": "640",
+                                    "mapHeight": "360"
+                                }).render();
+                            </script>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+        <footer class="Footer">
+            <div class="container">
+                <ul>
+                    <li>서울 강남구 압구정로 10길 13 마사빌딩 3층 쿠산코리아(주)</li>
+                    <li>KUSANKOREA Co.,Ltd. 13, Apgujeong-ro 10-gil, Gangnam-gu, Seoul, Republic of Korea</li>
+                    <li>Tel 1833-9383</li>
+                    <li>Fax 02-3144-0128</li>
+                    <li>E-mail abikocurry@naver.com</li>
+                    <li>사업자등록번호 105-87-49920</li>
+                </ul>
+                <strong>Copyright&copy;2017 KUSANKOREA Company.All Rights Reserved.</strong>
+            </div>
+        </footer>
+        <div class="toTop">
+            <i class="xi-arrow-up"></i>
+        </div>
     </div>
 </body>
 

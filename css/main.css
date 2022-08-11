@@ -240,29 +240,12 @@ p {
     background: #f00;
 }
 
-.menu {
-    padding: 100px 0;
-}
-
-.menu h2 {
-    text-align: center;
-    margin: 0 0 50px 0;
-}
-
-.tab_menu ul {
-    width: 1200px;
-    display: flex;
-    text-align: center;
-}
-
-.tab_menu ul li {
-    flex: 1;
-    border: 1px solid #ddd;
-    padding: 10px 50px;
-}
-
-.tab_menu ul li a {
-    font-size: 25px;
+.brand .container .inner_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .introduce {
@@ -340,7 +323,47 @@ p {
     line-height: 20px;
 }
 
+.map .left .map_subicon i {
+    display: block;
+    font-size: 30px;
+}
+
+.map .left .map_subicon i strong {
+    font-size: 21px;
+}
+
 map .right {
     float: left;
     width: 50%;
+}
+
+.Footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.Footer .container {
+    display: block;
+}
+
+.Footer ul li {
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.Footer .container strong {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.toTop i {
+    position: fixed;
+    font-size: 25px;
+    top: 90%;
+    left: 90%;
+    padding: 5px;
+    background: #f3f3f3;
+    border-radius: 10px;
 }
