@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/jquery-1.12.4.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/jquery.scrollme.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
 
@@ -136,23 +137,6 @@
                     </figure>
                 </div>
             </section>
-            <section class="brand">
-                <h2>아비꼬 카레</h2>
-                <div class="container">
-                    <figure>
-                        <img src="./img/brand01.jpg" alt="">
-                        <div class="inner_text">
-                            <h3>마음과 정성의 100시간</h3>
-                        </div>
-                    </figure>
-                    <figure>
-                        <img src="./img/brand02.jpg" alt="">
-                        <div class="inner_text">
-                            <h3>아낌없이 주는 정 문화</h3>
-                        </div>
-                    </figure>
-                </div>
-            </section>
             <section class="introduce">
                 <div class="container">
                     <div class="left">
@@ -179,6 +163,34 @@
                     </div>
                 </div>
             </section>
+            <section class="tab">
+                <div class="container">
+                    <h3>뉴스 &amp; 공지사항</h3>
+                    <div class="tab_menu">
+                        <ul>
+                            <li class="on">
+                                <a href="">공지</a>
+                            </li>
+                            <li><a href="">기사</a></li>
+                            <li><a href="">이벤트</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_content">
+                        <ul>
+                            <li>[공지]
+                                <ul>
+                                    <li>[공지]</li>
+                                    <li>[공지]</li>
+                                    <li>[공지]</li>
+                                    <li>[공지]</li>
+                                </ul>
+                            </li>
+                            <li>[기사]</li>
+                            <li>[이벤트]</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section class="map">
                 <div class="container">
                     <div class="left">
@@ -187,11 +199,9 @@
                             <br />13, Apgujeong-ro 10-gil, Gangnam-gu, Seoul, Republic of Korea
                         </p>
                         <div class="map_subicon">
-                            <i class="xi-call">
-                                <strong>TEL</strong>
-                            </i>
-                            <i class="xi-fax"></i>
-                            <i class="xi-mail"></i>
+                            <i class="xi-call"><strong>TEL : 1833-9383</strong> </i>
+                            <i class="xi-fax"><strong>FAX : 02-3144-0128</strong></i>
+                            <i class="xi-mail"><strong>E-mail : abikocurry@naver.com</strong></i>
                         </div>
                     </div>
                     <div class="right">
@@ -213,8 +223,8 @@
                                 new daum.roughmap.Lander({
                                     "timestamp": "1660201643739",
                                     "key": "2bch4",
-                                    "mapWidth": "640",
-                                    "mapHeight": "360"
+                                    "mapWidth": "600",
+                                    "mapHeight": "337.5"
                                 }).render();
                             </script>
                         </div>
@@ -231,8 +241,19 @@
                     <li>Fax 02-3144-0128</li>
                     <li>E-mail abikocurry@naver.com</li>
                     <li>사업자등록번호 105-87-49920</li>
+                    <li><strong>Copyright&copy;2017 KUSANKOREA Company.All Rights Reserved.</strong></li>
                 </ul>
-                <strong>Copyright&copy;2017 KUSANKOREA Company.All Rights Reserved.</strong>
+                <div class="sns">
+                    <a href=""><i class="xi-facebook"></i></a>
+                    <a href=""><i class="xi-instagram"></i></a>
+                    <div class="family_link">
+                        <select id="fl">
+                            <option value="">family link</option>
+                            <option value="">facebook</option>
+                            <option value="">instagram</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </footer>
         <div class="toTop">

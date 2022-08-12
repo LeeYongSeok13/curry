@@ -13,6 +13,11 @@ h3 {
 p {
     font-size: 17px;
     font-weight: 300;
+    line-height: 1.414;
+}
+
+span {
+    color: #f8b62c;
 }
 
 .container {
@@ -210,44 +215,6 @@ p {
     color: #fff;
 }
 
-.brand {
-    padding: 100px 0;
-    display: block;
-}
-
-.brand h2 {
-    text-align: center;
-    margin: 0 0 50px 0;
-}
-
-.brand .container {
-    gap: 50px;
-}
-
-.brand .container figure {
-    position: relative;
-}
-
-.brand .container figure::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 1px;
-    height: 50px;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #f00;
-}
-
-.brand .container .inner_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-}
-
 .introduce {
     padding: 100px 0;
 }
@@ -264,7 +231,6 @@ p {
 .introduce .container .left h3 {
     position: relative;
     margin: 0 0 50px 20px;
-
 }
 
 .introduce .container .left h3::before {
@@ -275,10 +241,6 @@ p {
     height: 100%;
     background: #ff1111;
     left: -20px;
-}
-
-.introduce .container .left p {
-    line-height: 20px;
 }
 
 .introduce .container .right {
@@ -295,13 +257,59 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.tab {
+    padding: 100px 0;
+}
+
+.tab .container {
+    display: block;
+}
+
+.tab .container h3 {
+    position: relative;
+    margin: 0 0 50px 20px;
+}
+
+.tab .container h3::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background: #ff1111;
+    left: -20px;
+}
+
+.tab_menu ul {
+    display: flex;
+    text-align: center;
+}
+
+.tab_menu ul li {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.tab_menu ul li.on {
+    background: #333;
+    color: #fff;
+}
+
+.tab_menu ul li a {}
+
 .map {
     padding: 100px 0;
 }
 
+.map .container {
+    justify-content: space-between;
+}
+
 .map .left {
-    float: left;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .map .left h3 {
@@ -332,10 +340,7 @@ p {
     font-size: 21px;
 }
 
-map .right {
-    float: left;
-    width: 50%;
-}
+map .right {}
 
 .Footer {
     background: #333;
@@ -344,7 +349,7 @@ map .right {
 }
 
 .Footer .container {
-    display: block;
+    justify-content: space-between;
 }
 
 .Footer ul li {
@@ -356,6 +361,11 @@ map .right {
 .Footer .container strong {
     font-size: 11px;
     font-weight: 300;
+}
+
+.Footer .sns i {
+    font-size: 35px;
+    margin: 0 0 50px 0;
 }
 
 .toTop i {

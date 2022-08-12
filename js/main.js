@@ -13,6 +13,12 @@ $(function () {
         }
     });
 
+    $('.tab_menu').on('click', function (event) {
+        event.preventDefault();
+        var idx = $(this).index();
+        ('.tab_menu>ul li').removeClass('on');
+        ('.tab_menu>ul li').eq(idx).addClass('on');
+    })
 
     $('.toTop').on('click', function () {
         $('html,body').animate({ scrollTop: 0 }, 500);
