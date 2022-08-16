@@ -99,6 +99,7 @@ span {
     border: 1px solid #ddd;
     opacity: 0;
     transition: 0.5s;
+    visibility: hidden;
 }
 
 .main_menu .gnb>ul>li>ul>li {
@@ -109,13 +110,14 @@ span {
     border: none;
 }
 
+.main_menu .gnb>ul>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
 .main_menu .gnb>ul>li>ul>li:hover {
     background: #000;
     color: #fff;
-}
-
-.main_menu .gnb>ul>li:hover>ul {
-    opacity: 1;
 }
 
 .main_menu .gnb>ul>li~li::before {
@@ -215,6 +217,73 @@ span {
     color: #fff;
 }
 
+.ad {
+    line-height: 1.414;
+}
+
+.ad01 {
+    position: relative;
+}
+
+.ad01 .text {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.ad01 .text h3 {
+    color: #fff;
+    margin: 0 0 50px 0;
+}
+
+.ad01 .text p {
+    color: #fff;
+}
+
+.ad02 {
+    position: relative;
+}
+
+.ad02 .text {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.ad02 .text h3 {
+    color: #fff;
+    margin: 0 0 50px 0;
+}
+
+.ad02 .text p {
+    color: #fff;
+}
+
+.ad .ad_slider figure h3 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.ad .ad_slider figure.on h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ad .ad_slider figure p {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s 0.5s;
+}
+
+.ad .ad_slider figure.on p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 .introduce {
     padding: 100px 0;
 }
@@ -285,18 +354,51 @@ span {
     text-align: center;
 }
 
-.tab_menu ul li {
+.tab_menu>ul>li {
     flex: 1;
     border: 1px solid #ddd;
     padding: 5px 0;
+    cursor: pointer;
 }
 
-.tab_menu ul li.on {
+.tab_menu>ul>li.on {
     background: #333;
     color: #fff;
 }
 
-.tab_menu ul li a {}
+.tab_content {
+    line-height: 1.414;
+}
+
+.tab_content ul {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.tab_content ul li {
+    display: none;
+}
+
+.tab_content ul li.on {
+    display: block;
+}
+
+.tab_content ul>li>dl>dd {
+    border-bottom: 1px solid #ddd;
+}
+
+.tab_content ul>li>dl>dd:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.tab_content ul>li>dl>dd {
+    padding: 5px;
+}
+
+.tab_content ul>li>dl>dd a {
+    font-size: 15px;
+    padding: 10px 0;
+}
 
 .map {
     padding: 100px 0;
@@ -339,8 +441,6 @@ span {
 .map .left .map_subicon i strong {
     font-size: 21px;
 }
-
-map .right {}
 
 .Footer {
     background: #333;
