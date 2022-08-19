@@ -70,8 +70,16 @@ span {
     height: 129px;
 }
 
+.main_menu {
+    height: 83.84px;
+}
+
+.main_menu .container img {
+    height: 65%;
+}
+
 .main_menu .container .gnb {
-    line-height: 129px;
+    line-height: 83.84px;
 }
 
 .main_menu .gnb ul {
@@ -90,7 +98,7 @@ span {
     display: block;
     z-index: 999;
     text-align: center;
-    top: 129px;
+    top: 83.84px;
     left: 50%;
     transform: translateX(-50%);
     line-height: 35px;
