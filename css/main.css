@@ -140,6 +140,10 @@ span {
     transform: translateY(-50%);
 }
 
+.main_menu .mediaicon {
+    display: none;
+}
+
 .main_Visual {
     position: relative;
 }
@@ -473,7 +477,7 @@ span {
 }
 
 .map .left .map_subicon i strong {
-    font-size: 21px;
+    font-size: 15px;
 }
 
 .Footer {
@@ -512,4 +516,17 @@ span {
     border-radius: 10px;
 }
 
-@media (max-width: 968px) {}
+@media (max-width: 968px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main_menu .container .gnb {
+        display: none;
+    }
+
+    .main_menu .container .mediaicon {
+        display: block;
+    }
+}
