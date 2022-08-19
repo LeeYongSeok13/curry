@@ -4,14 +4,24 @@ $(function () {
         dots: true,
     });
 
-    $('.ad_slider').slick({
-        arrows: false,
+    $('.main_angle i:nth-child(1)').on('click', function () {
+        $('.main_Slider').slick('slickPrev');
     });
+
+    $('.main_angle i:nth-child(2)').on('click', function () {
+        $('.main_Slider').slick('slickNext');
+    });
+
 
     $('.ad_slider').on('init afterChange', function () {
         var current = $('.slick-current');
         current.addClass('on').siblings().removeClass('on');
     })
+
+    $('.ad_slider').slick({
+        arrows: false,
+        autoplay: true,
+    });
 
     $('.tab_menu li').on('click', function (event) {
         event.preventDefault();

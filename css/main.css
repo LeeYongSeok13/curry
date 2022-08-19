@@ -166,11 +166,33 @@ span {
     font-size: 0;
     width: 300px;
     height: 5px;
-    background: #000;
+    background: #fff;
+    transition: 0.5s;
 }
 
 .main_Slider .slick-dots li.slick-active button {
-    background: #fff;
+    background: #000;
+}
+
+.main_angle i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 150px;
+    cursor: pointer;
+}
+
+.main_angle i:hover {
+    color: #000;
+}
+
+.main_angle i:nth-child(1) {
+    margin: 0 0 0 -800px;
+}
+
+.main_angle i:nth-child(2) {
+    margin: 0 0 0 800px;
 }
 
 .information {
@@ -372,7 +394,7 @@ span {
 
 .tab_content ul {
     border: 1px solid #ddd;
-    margin: 10px 0;
+    border-top: none;
 }
 
 .tab_content ul li {
